@@ -3,13 +3,15 @@ h1, main {
 }
 
 h1 {
-    font-size: xx-large;
+    font-size: 10vw;
+    color: #FFA102;
 }
 
 .toolbar {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
+    margin-top: -35px;
 }
 
 main {
@@ -24,4 +26,8 @@ img {
 
 .img-operater {
     max-width: 40px;
+}
+
+.timer-style {
+    color: red;
 }
