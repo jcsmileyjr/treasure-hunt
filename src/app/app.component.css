@@ -1,0 +1,27 @@
+h1, main {
+    text-align: center;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 100px;
+}
+
+.img-operater {
+    max-width: 40px;
+}
