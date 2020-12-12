@@ -30,4 +30,15 @@ img {
 
 .timer-style {
     color: red;
+    font-weight: bold;
+}
+
+.score-style {
+    color: #FFA102;
+    font-weight: bold;
+}
+
+.game-over-style {
+    color: red;
+    text-align: center;
 }
