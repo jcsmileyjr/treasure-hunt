@@ -1,0 +1,9 @@
+h1, main {
+    text-align: center;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
