@@ -40,6 +40,11 @@ export class AppComponent {
     }
   }
 
+  // FIX BUG: You can't call a event.target.value in the HTML cause of typescript null check. 
+  getValue(event: any){
+    this.userAnswer = event.target.value;
+  }
+
   // When the user click the submit button, check if submitted answer is correct and reset timer
   submitAnswer(){
     if((this.userAnswer).trim() === this.answers[this.correctAnswers]){
