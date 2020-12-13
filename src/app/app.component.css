@@ -7,6 +7,10 @@ h1 {
     color: #FFA102;
 }
 
+h1, h2 {
+    margin-top: 0px;
+}
+
 .toolbar {
     display: flex;
     justify-content: space-evenly;
@@ -44,7 +48,18 @@ img {
     font-size: 60px;
 }
 
-label, button {
+.win-style {
+    color: green;
+    text-align: center;
+    font-size: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+label {
     margin-top: 30px;
 }
 
@@ -62,4 +77,26 @@ button {
     width: 90px;
     font-weight: bold;
     font-size: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.tip-style {
+    font-size: 12px;
+    color: #707070;
+}
+
+.reset-button {
+    background-color: red;
+}
+
+.skip-button {
+    background-color: rgb(209, 139, 9);
+}
+
+.image-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
 }
