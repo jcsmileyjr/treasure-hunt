@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,7 @@ export class AppComponent {
   userAnswer = " ";
   correctAnswers = 0;
   imageList =[
-    ['../assets/eye.png', "../assets/dribbble-logo.png"],
+    ['https://live.staticflickr.com/2/3038523_c3c16960cd_b.jpg', "https://api.creativecommons.engineering/v1/thumbs/603da40d-9622-491f-bf63-d0bccb879123"],
     ["https://api.creativecommons.engineering/v1/thumbs/73e672b8-6cf5-47b4-a77f-6065947619fa","https://pixy.org/download/4463580/"],
     ["https://api.creativecommons.engineering/v1/thumbs/82b88d62-a5e8-41fc-975c-c1603f0219c3","../assets/man.png"],
     ["https://api.creativecommons.engineering/v1/thumbs/82b88d62-a5e8-41fc-975c-c1603f0219c3","https://api.creativecommons.engineering/v1/thumbs/3993ab41-7fcb-4dc9-828c-3cbe538075e9"],
@@ -27,9 +28,10 @@ export class AppComponent {
     ["http://clipart-library.com/data_images/122614.png","https://api.creativecommons.engineering/v1/thumbs/d3a26ed2-1b0b-4ad3-90bc-8eb3e1a581e1"]
   ];
   canvas;
+  interval;
 
   constructor(){
-    setInterval(()=> this.countdown(), 1000);
+    this.interval = setInterval(()=> this.countdown(), 1000);
   }
 
   // Countdown timer that ends game
@@ -37,6 +39,7 @@ export class AppComponent {
     this.timer = this.timer - 1;
     if(this.timer <= 0){
       this.gameOver = true;
+      clearInterval(this.interval);
     }
   }
 
@@ -47,10 +50,15 @@ export class AppComponent {
 
   // When the user click the submit button, check if submitted answer is correct and reset timer
   submitAnswer(){
-    if((this.userAnswer).trim() === this.answers[this.correctAnswers]){
+    if((this.userAnswer).trim().toLowerCase() === this.answers[this.correctAnswers]){
       this.score += 100;
       this.timer = 60;
       this.correctAnswers += 1;
+    }else{
+      Swal.fire({
+        title: 'Sorry, try again',
+        icon:'warning'
+      });
     }
     this.userAnswer = "";
     if(this.correctAnswers >= 10){
@@ -63,6 +71,10 @@ export class AppComponent {
     this.timer = 60;
     this.correctAnswers = 0;
     this.userAnswer = "";
+    clearInterval(this.interval); 
+    this.interval = setInterval(()=> this.countdown(), 1000); // reset the timer
+    this.gameOver = false; // Remove the end game screen and show the game screen
+
   }
 
   skip() {

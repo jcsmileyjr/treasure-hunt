@@ -15,6 +15,7 @@
     </header>
     <section *ngIf="gameOver" class="game-over-style">
       <h2>Game Over</h2>
+      <button type="button" title="reset" class="reset-button" (click)="reset()">Reset</button>
     </section>
     <main *ngIf="!gameOver">
       <h2>What do these pictures represent?</h2>
