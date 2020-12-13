@@ -22,6 +22,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 
 img {
@@ -99,4 +100,45 @@ button {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+}
+
+/*large screens*/
+@media only screen and (min-width: 500px) {
+    .app {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        padding-top: 50px;
+        background-color: rgb(250, 220, 154);
+      }
+      .container {
+        background-color: white;
+        height: 80vh;
+        width: 400px;        
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+}
+
+
+/*large screens*/
+@media only screen and (min-width: 850px) {
+    .app {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        padding-top: 50px;
+        background-color: rgb(250, 220, 154);
+      }
+      .container {
+        background-color: white;
+        height: 80vh;
+        width: 500px;        
+      }
+
+      h1 {
+          font-size: 70px;
+      }
 }

@@ -1,27 +1,48 @@
-# TreasureHunt
+# Treasure Hunt
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+<hr>
 
-## Development server
+![gif of app](src/assets/treasure-hunt-2.gif)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Project Demo Link: [Treasure Hunt](https://smileytreasurehunt.netlify.app/)
 
-## Code scaffolding
+### Table of Contents
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Purpose
+2. Motivation
+3. Wireframe
+4. How to play
+5. Technologies Used
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Purpose:
 
-## Running unit tests
+Treasure Hunt kids web game where users use pictues to guess compound words.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Motivation:
 
-## Running end-to-end tests
+The goal was to learn Angular 11 before working on a project for the DigitalOcean App Hackathon.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### WireFrame
 
-## Further help
+![Screen-shot of Wireframe in use](src/assets/wireframe.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### How to play:
+
+- User will input their guess and click the submit button to see if its right.  
+
+### This app was built with the following technologies:
+
+**Angular 11:** JavaScript front-end library for building user interfaces
+
+**Git-Hub:** Web-based version control repository and Internet hosting service
+
+**Abode XD** A wire-framing tool used to create a mockup/visual of what is to be coded
+
+**JavaScript:** Object-oriented programming language for web pages
+
+**HTML:** Mark-up language for creating web pages
+
+**CSS:** A formatting language for styling web pages
+
+_Created by JC Smiley in December of 2020_

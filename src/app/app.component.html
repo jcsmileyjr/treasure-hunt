@@ -1,36 +1,38 @@
-<div *ngIf="!win">
-  <header>
-    <h1>{{title}}</h1>
-    <div class="toolbar">
-      <section>
-        <h3>Score</h3>
-        <p class="score-style">{{score}}</p>
-      </section>
-      <section>
-        <h3>Timer</h3>
-        <p class="timer-style">{{timer}}</p>
-      </section>
-    </div>
-  </header>
-  <section *ngIf="gameOver" class="game-over-style">
-    <h2>Game Over</h2>
-  </section>
-  <main *ngIf="!gameOver">
-    <h2>What do these pictures represent?</h2>
-    <section class="image-section">
-      <img src={{imageList[correctAnswers][0]}} alt="picture of an eye" />
-      <img src="../assets/plus.png" alt="picture of an plus sign" class="img-operater" />
-      <img src={{imageList[correctAnswers][1]}} alt="picture of an basketball" />
+<div class="app" *ngIf="!win">
+  <div class="container">
+    <header>
+      <h1>{{title}}</h1>
+      <div class="toolbar">
+        <section>
+          <h3>Score</h3>
+          <p class="score-style">{{score}}</p>
+        </section>
+        <section>
+          <h3>Timer</h3>
+          <p class="timer-style">{{timer}}</p>
+        </section>
+      </div>
+    </header>
+    <section *ngIf="gameOver" class="game-over-style">
+      <h2>Game Over</h2>
     </section>
+    <main *ngIf="!gameOver">
+      <h2>What do these pictures represent?</h2>
+      <section class="image-section">
+        <img src={{imageList[correctAnswers][0]}} alt="picture of an eye" />
+        <img src="../assets/plus.png" alt="picture of an plus sign" class="img-operater" />
+        <img src={{imageList[correctAnswers][1]}} alt="picture of an basketball" />
+      </section>
 
-      <label for="answer-input" >Type your answer below:</label>
-      <input type="text" id="answerInput" [value]="userAnswer" (change)="getValue($event)" autocomplete="off" autofocus />
-      <p class="tip-style">All answers are compound words like volleyball"</p>
-      
-      <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
-      <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
-      <button type="button" title="reset" class="reset-button" (click)="reset()">Reset</button>
-  </main>
+        <label for="answer-input" >Type your answer below:</label>
+        <input type="text" id="answerInput" [value]="userAnswer" (change)="getValue($event)" autocomplete="off" autofocus />
+        <p class="tip-style">All answers are compound words like volleyball"</p>
+        
+        <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
+        <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
+        <button type="button" title="reset" class="reset-button" (click)="reset()">Reset</button>
+    </main>
+  </div>
 </div>
 <div *ngIf="win" class="win-style">
   <h2>Winner</h2>
