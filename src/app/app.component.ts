@@ -47,7 +47,7 @@ export class AppComponent {
 
   // When the user click the submit button, check if submitted answer is correct and reset timer
   submitAnswer(){
-    if((this.userAnswer).trim() === this.answers[this.correctAnswers]){
+    if((this.userAnswer).trim().toLowerCase() === this.answers[this.correctAnswers]){
       this.score += 100;
       this.timer = 60;
       this.correctAnswers += 1;
