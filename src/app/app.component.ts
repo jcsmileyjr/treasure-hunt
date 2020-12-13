@@ -11,12 +11,15 @@ export class AppComponent {
   score = 0;
   timer =60;
   gameOver = false;
-  answers = ["eyeball","butterfly"];
+  answers = ["eyeball","butterfly","fireman","hotdog","starfish"];
   userAnswer = " ";
   correctAnswers = 0;
   imageList =[
     ['../assets/eye.png', "../assets/dribbble-logo.png"],
-    ["https://api.creativecommons.engineering/v1/thumbs/73e672b8-6cf5-47b4-a77f-6065947619fa","https://pixy.org/download/4463580/"]
+    ["https://api.creativecommons.engineering/v1/thumbs/73e672b8-6cf5-47b4-a77f-6065947619fa","https://pixy.org/download/4463580/"],
+    ["https://api.creativecommons.engineering/v1/thumbs/82b88d62-a5e8-41fc-975c-c1603f0219c3","../assets/man.png"],
+    ["https://api.creativecommons.engineering/v1/thumbs/82b88d62-a5e8-41fc-975c-c1603f0219c3", "https://api.creativecommons.engineering/v1/thumbs/3993ab41-7fcb-4dc9-828c-3cbe538075e9"],
+    ["https://api.creativecommons.engineering/v1/thumbs/aeec847a-b751-48c3-95ab-a5460f39b096","https://api.creativecommons.engineering/v1/thumbs/ed2305f0-9a9f-47e1-8607-e2848e676136"]
   ];
 
   constructor(){
@@ -38,6 +41,7 @@ export class AppComponent {
       this.timer = 60;
       this.correctAnswers += 1;
     }
+    this.userAnswer = "";
   }
 
 }

@@ -22,7 +22,7 @@
     <img src={{imageList[correctAnswers][1]}} alt="picture of an basketball" />
 
       <label for="answer-input" >Type your answer below:</label>
-      <input type="text" id="answerInput" [value] ="userAnswer" (input)= "userAnswer = $event.currentTarget.value" />
+      <input type="text" id="answerInput" [value] ="userAnswer" (input)= "userAnswer = $event.currentTarget.value" autocomplete="off" autofocus />
     
       <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
   </main>
