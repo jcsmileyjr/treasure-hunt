@@ -44,6 +44,16 @@ img {
     font-size: 60px;
 }
 
+.win-style {
+    color: green;
+    text-align: center;
+    font-size: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 label, button {
     margin-top: 30px;
 }
