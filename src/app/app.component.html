@@ -22,8 +22,8 @@
     <img src="../assets/dribbble-logo.png" alt="picture of an basketball" />
 
       <label for="answer-input" >Type your answer below:</label>
-      <input type="text" id="answer-input" />
+      <input type="text" id="answerInput" [value] ="userAnswer" (input)= "userAnswer = $event.target.value" />
     
-      <button type="button" title="submit">Submit</button>
+      <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
   </main>
 </div>
