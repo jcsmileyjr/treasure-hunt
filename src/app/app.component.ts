@@ -11,7 +11,7 @@ export class AppComponent {
   score = 0;
   timer =60;
   gameOver = false;
-  win= true;
+  win= false;
   answers = ["eyeball","butterfly","fireman","hotdog","starfish", "catfish", "dragonfly", "rainbow", "watermelon", "football"];
   userAnswer = " ";
   correctAnswers = 0;
@@ -51,6 +51,13 @@ export class AppComponent {
     if(this.correctAnswers >= 10){
       this.win = true;
     }
+  }
+
+  reset() {
+    this.score = 0;
+    this.timer = 60;
+    this.correctAnswers = 0;
+    this.userAnswer = "";
   }
 
 }

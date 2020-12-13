@@ -17,14 +17,18 @@
   </section>
   <main *ngIf="!gameOver">
     <h2>What do these pictures represent?</h2>
-    <img src={{imageList[correctAnswers][0]}} alt="picture of an eye" />
-    <img src="../assets/plus.png" alt="picture of an plus sign" class="img-operater" />
-    <img src={{imageList[correctAnswers][1]}} alt="picture of an basketball" />
+    <section class="image-section">
+      <img src={{imageList[correctAnswers][0]}} alt="picture of an eye" />
+      <img src="../assets/plus.png" alt="picture of an plus sign" class="img-operater" />
+      <img src={{imageList[correctAnswers][1]}} alt="picture of an basketball" />
+    </section>
+
 
       <label for="answer-input" >Type your answer below:</label>
       <input type="text" id="answerInput" [value] ="userAnswer" (input)= "userAnswer = $event.currentTarget.value" autocomplete="off" autofocus />
-    
+      <p class="tip-style">All answers are compound words like volleyball"</p>
       <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
+      <button type="button" title="reset" class="reset-button" (click)="reset()">Reset</button>
   </main>
 </div>
 <div *ngIf="win" class="win-style">
