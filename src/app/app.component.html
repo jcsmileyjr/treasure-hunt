@@ -17,12 +17,12 @@
   </section>
   <main *ngIf="!gameOver">
     <h2>What do these pictures represent?</h2>
-    <img src="../assets/eye.png" alt="picture of an eye" />
+    <img src={{imageList[correctAnswers][0]}} alt="picture of an eye" />
     <img src="../assets/plus.png" alt="picture of an plus sign" class="img-operater" />
-    <img src="../assets/dribbble-logo.png" alt="picture of an basketball" />
+    <img src={{imageList[correctAnswers][1]}} alt="picture of an basketball" />
 
       <label for="answer-input" >Type your answer below:</label>
-      <input type="text" id="answerInput" [value] ="userAnswer" (input)= "userAnswer = $event.target.value" />
+      <input type="text" id="answerInput" [value] ="userAnswer" (input)= "userAnswer = $event.currentTarget.value" />
     
       <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
   </main>
