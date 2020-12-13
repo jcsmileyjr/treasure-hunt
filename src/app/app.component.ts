@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -51,6 +52,11 @@ export class AppComponent {
       this.score += 100;
       this.timer = 60;
       this.correctAnswers += 1;
+    }else{
+      Swal.fire({
+        title: 'Sorry, try again',
+        icon:'warning'
+      });
     }
     this.userAnswer = "";
     if(this.correctAnswers >= 10){
