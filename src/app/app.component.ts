@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import {interval} from 'rxjs';
-import * as confetti from 'canvas-confetti';
 
 @Component({
   selector: 'app-root',
@@ -28,9 +26,10 @@ export class AppComponent {
     ["https://api.creativecommons.engineering/v1/thumbs/bbc81f99-a9a9-48cd-988c-1c9302218f19","https://api.creativecommons.engineering/v1/thumbs/b7601da3-44f2-46fb-8adb-4c5fbf387ecc"],
     ["http://clipart-library.com/data_images/122614.png","https://api.creativecommons.engineering/v1/thumbs/d3a26ed2-1b0b-4ad3-90bc-8eb3e1a581e1"]
   ];
+  canvas;
 
   constructor(){
-    //setInterval(()=> this.countdown(), 1000);
+    setInterval(()=> this.countdown(), 1000);
   }
 
   // Countdown timer that ends game
@@ -52,16 +51,6 @@ export class AppComponent {
       this.score += 100;
       this.timer = 60;
       this.correctAnswers += 1;
-
-      confetti.create()({
-        particleCount: 5000,
-        spread: 360,
-        origin: {
-            y: 1,
-            x: 1
-        },
-        zIndex: 600
-    });
     }
     this.userAnswer = "";
     if(this.correctAnswers >= 10){
@@ -80,7 +69,6 @@ export class AppComponent {
     if(this.correctAnswers <10){
       this.correctAnswers += 1;
       this.userAnswer = "";
-      console.log(this.correctAnswers)
     }else{
       this.win = true;
     }
