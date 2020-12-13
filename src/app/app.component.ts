@@ -16,7 +16,7 @@ export class AppComponent {
   userAnswer = " ";
   correctAnswers = 0;
   imageList =[
-    ['../assets/eye.png', "../assets/dribbble-logo.png"],
+    ['https://live.staticflickr.com/2/3038523_c3c16960cd_b.jpg', "https://api.creativecommons.engineering/v1/thumbs/603da40d-9622-491f-bf63-d0bccb879123"],
     ["https://api.creativecommons.engineering/v1/thumbs/73e672b8-6cf5-47b4-a77f-6065947619fa","https://pixy.org/download/4463580/"],
     ["https://api.creativecommons.engineering/v1/thumbs/82b88d62-a5e8-41fc-975c-c1603f0219c3","../assets/man.png"],
     ["https://api.creativecommons.engineering/v1/thumbs/82b88d62-a5e8-41fc-975c-c1603f0219c3","https://api.creativecommons.engineering/v1/thumbs/3993ab41-7fcb-4dc9-828c-3cbe538075e9"],
