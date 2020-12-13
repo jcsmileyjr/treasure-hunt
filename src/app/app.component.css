@@ -43,3 +43,23 @@ img {
     text-align: center;
     font-size: 60px;
 }
+
+label, button {
+    margin-top: 30px;
+}
+
+input {
+    height: 30px;
+    margin-top: 5px;
+    border: 1px black solid;
+}
+
+button {
+    border: none;
+    background-color: green;
+    color: white;
+    height: 40px;
+    width: 90px;
+    font-weight: bold;
+    font-size: 20px;
+}
