@@ -28,9 +28,10 @@ export class AppComponent {
     ["http://clipart-library.com/data_images/122614.png","https://api.creativecommons.engineering/v1/thumbs/d3a26ed2-1b0b-4ad3-90bc-8eb3e1a581e1"]
   ];
   canvas;
+  interval;
 
   constructor(){
-    setInterval(()=> this.countdown(), 1000);
+    this.interval = setInterval(()=> this.countdown(), 1000);
   }
 
   // Countdown timer that ends game
@@ -38,6 +39,7 @@ export class AppComponent {
     this.timer = this.timer - 1;
     if(this.timer <= 0){
       this.gameOver = true;
+      clearInterval(this.interval);
     }
   }
 
