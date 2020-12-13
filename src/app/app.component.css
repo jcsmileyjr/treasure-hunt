@@ -53,6 +53,7 @@ img {
     text-align: center;
     font-size: 10vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -87,6 +88,10 @@ button {
 
 .reset-button {
     background-color: red;
+}
+
+.skip-button {
+    background-color: rgb(209, 139, 9);
 }
 
 .image-section {

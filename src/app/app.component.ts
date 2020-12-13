@@ -60,4 +60,15 @@ export class AppComponent {
     this.userAnswer = "";
   }
 
+  skip() {
+    if(this.correctAnswers <10){
+      this.correctAnswers += 1;
+      this.userAnswer = "";
+      console.log(this.correctAnswers)
+    }else{
+      this.win = true;
+    }
+
+  }
+
 }

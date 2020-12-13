@@ -28,9 +28,11 @@
       <input type="text" id="answerInput" [value] ="userAnswer" (input)= "userAnswer = $event.currentTarget.value" autocomplete="off" autofocus />
       <p class="tip-style">All answers are compound words like volleyball"</p>
       <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
+      <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
       <button type="button" title="reset" class="reset-button" (click)="reset()">Reset</button>
   </main>
 </div>
 <div *ngIf="win" class="win-style">
   <h2>Winner</h2>
+  <h3>Final score is {{score}}</h3>
 </div>
