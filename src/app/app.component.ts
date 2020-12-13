@@ -58,6 +58,7 @@ export class AppComponent {
     }else{
       Swal.fire({
         title: 'Sorry, try again',
+        text:"Tip: Answer is one word like 'goldfish' ",
         icon:'warning'
       });
     }
