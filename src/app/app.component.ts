@@ -29,7 +29,7 @@ export class AppComponent {
   ];
 
   constructor(){
-    setInterval(()=> this.countdown(), 1000);
+    //setInterval(()=> this.countdown(), 1000);
   }
 
   // Countdown timer that ends game
