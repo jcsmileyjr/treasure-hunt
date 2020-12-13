@@ -15,7 +15,7 @@
   <section *ngIf="gameOver" class="game-over-style">
     <h2>Game Over</h2>
   </section>
-  <main>
+  <main *ngIf="!gameOver">
     <h2>What do these pictures represent?</h2>
     <img src="../assets/eye.png" alt="picture of an eye" />
     <img src="../assets/plus.png" alt="picture of an plus sign" class="img-operater" />
