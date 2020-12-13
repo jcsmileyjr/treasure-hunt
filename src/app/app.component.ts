@@ -71,6 +71,10 @@ export class AppComponent {
     this.timer = 60;
     this.correctAnswers = 0;
     this.userAnswer = "";
+    clearInterval(this.interval); 
+    this.interval = setInterval(()=> this.countdown(), 1000); // reset the timer
+    this.gameOver = false; // Remove the end game screen and show the game screen
+
   }
 
   skip() {
