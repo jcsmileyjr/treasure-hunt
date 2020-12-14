@@ -31,7 +31,7 @@
         
         <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
     </main>
-    <footer class="support-buttons-section">
+    <footer class="support-buttons-section" *ngIf="!gameOver">
       <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
       <section *ngIf="!pauseTimer">
         <button type="button" title="pause" class="pause-button" (click)="pause()">Pause Timer</button>
