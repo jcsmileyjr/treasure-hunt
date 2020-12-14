@@ -18,6 +18,13 @@ h1, h2 {
     margin-top: -35px;
 }
 
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -113,10 +120,6 @@ button {
     justify-content: space-evenly;
 }
 
-footer {
-    margin-top: 40px;
-}
-
 /*large screens*/
 @media only screen and (min-width: 500px) {
     .app {
@@ -154,7 +157,7 @@ footer {
       .container {
         background-color: white;
         height: 80vh;
-        width: 500px;        
+        width: 500px;      
       }
 
       h1 {

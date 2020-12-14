@@ -30,19 +30,17 @@
         <p class="tip-style">All answers are compound words like volleyball"</p>
         
         <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
-        <footer class="support-buttons-section">
-          <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
-          <section *ngIf="!pauseTimer">
-            <button type="button" title="pause" class="pause-button" (click)="pause()">Pause Timer</button>
-          </section>
-          <section *ngIf="pauseTimer">
-            <button type="button" title="pause" class="pause-button" (click)="startTimer()">Restart Timer</button>
-          </section>
-          
-          <button type="button" title="restart" class="restart-button" (click)="restart()">Restart Game</button>
-        </footer>
-
     </main>
+    <footer class="support-buttons-section">
+      <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
+      <section *ngIf="!pauseTimer">
+        <button type="button" title="pause" class="pause-button" (click)="pause()">Pause Timer</button>
+      </section>
+      <section *ngIf="pauseTimer">
+        <button type="button" title="pause" class="pause-button" (click)="startTimer()">Restart Timer</button>
+      </section>          
+      <button type="button" title="restart" class="restart-button" (click)="restart()">Restart Game</button>
+    </footer>
   </div>
 </div>
 <div *ngIf="win" class="win-style">
