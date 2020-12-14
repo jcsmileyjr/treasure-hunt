@@ -15,7 +15,7 @@
     </header>
     <section *ngIf="gameOver" class="game-over-style">
       <h2>Game Over</h2>
-      <button type="button" title="reset" class="reset-button" (click)="reset()">Reset</button>
+      <button type="button" title="restart" class="restart-button" (click)="restart()">Restart Game</button>
     </section>
     <main *ngIf="!gameOver">
       <h2>What do these pictures represent?</h2>
@@ -24,15 +24,24 @@
         <img src="../assets/plus.png" alt="picture of an plus sign" class="img-operater" />
         <img src={{imageList[correctAnswers][1]}} alt="picture of an basketball" />
       </section>
+      <p class="hint">Hint: {{imageList[correctAnswers][2]}}</p>
 
-        <label for="answer-input" >Type your answer below:</label>
-        <input type="text" id="answerInput" [value]="userAnswer" (change)="getValue($event)" autocomplete="off" autofocus />
-        <p class="tip-style">All answers are compound words like volleyball"</p>
-        
-        <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
-        <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
-        <button type="button" title="reset" class="reset-button" (click)="reset()">Reset</button>
+      <label for="answer-input" >Type your answer below:</label>
+      <input type="text" id="answerInput" [value]="userAnswer" (change)="getValue($event)" autocomplete="off" autofocus />
+      <p class="tip-style">All answers are compound words like volleyball"</p>
+      
+      <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
     </main>
+    <footer class="support-buttons-section" *ngIf="!gameOver">
+      <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
+      <section *ngIf="!pauseTimer">
+        <button type="button" title="pause" class="pause-button" (click)="pause()">Pause Timer</button>
+      </section>
+      <section *ngIf="pauseTimer">
+        <button type="button" title="pause" class="pause-button" (click)="startTimer()">Restart Timer</button>
+      </section>          
+      <button type="button" title="restart" class="restart-button" (click)="restart()">Restart Game</button>
+    </footer>
   </div>
 </div>
 <div *ngIf="win" class="win-style">
