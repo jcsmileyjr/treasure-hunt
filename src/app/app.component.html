@@ -15,7 +15,7 @@
     </header>
     <section *ngIf="gameOver" class="game-over-style">
       <h2>Game Over</h2>
-      <button type="button" title="reset" class="reset-button" (click)="reset()">Reset</button>
+      <button type="button" title="restart" class="restart-button" (click)="restart()">Restart Game</button>
     </section>
     <main *ngIf="!gameOver">
       <h2>What do these pictures represent?</h2>
@@ -32,8 +32,14 @@
         <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
         <footer class="support-buttons-section">
           <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
-          <button type="button" title="reset" class="pause-button" (click)="pause()">Pause Timer</button>
-          <button type="button" title="reset" class="restart-button" (click)="reset()">Restart Game</button>
+          <section *ngIf="!pauseTimer">
+            <button type="button" title="pause" class="pause-button" (click)="pause()">Pause Timer</button>
+          </section>
+          <section *ngIf="pauseTimer">
+            <button type="button" title="pause" class="pause-button" (click)="startTimer()">Restart Timer</button>
+          </section>
+          
+          <button type="button" title="restart" class="restart-button" (click)="restart()">Restart Game</button>
         </footer>
 
     </main>

@@ -30,6 +30,7 @@ export class AppComponent {
   ];
   canvas;
   interval;
+  pauseTimer= false;
 
   constructor(){
     this.interval = setInterval(()=> this.countdown(), 1000);
@@ -68,7 +69,7 @@ export class AppComponent {
     }
   }
 
-  reset() {
+  restart() {
     this.score = 0;
     this.timer = 60;
     this.correctAnswers = 0;
@@ -89,7 +90,14 @@ export class AppComponent {
   }
 
   pause() {
+    clearInterval(this.interval);
+    this.pauseTimer= true;
+  }
 
+  startTimer(){
+    this.pauseTimer = false;
+    this.interval = setInterval(()=> this.countdown(), 1000); // reset the timer
+    console.log("restart function called")
   }
 
 }
