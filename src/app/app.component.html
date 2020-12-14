@@ -30,8 +30,12 @@
         <p class="tip-style">All answers are compound words like volleyball"</p>
         
         <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
-        <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
-        <button type="button" title="reset" class="reset-button" (click)="reset()">Reset</button>
+        <footer class="support-buttons-section">
+          <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
+          <button type="button" title="reset" class="pause-button" (click)="pause()">Pause Timer</button>
+          <button type="button" title="reset" class="restart-button" (click)="reset()">Restart Game</button>
+        </footer>
+
     </main>
   </div>
 </div>

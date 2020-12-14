@@ -86,6 +86,9 @@ export class AppComponent {
     }else{
       this.win = true;
     }
+  }
+
+  pause() {
 
   }
 
