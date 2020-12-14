@@ -120,6 +120,11 @@ button {
     justify-content: space-evenly;
 }
 
+.hint {
+    color: blue;
+    font-size: small;
+}
+
 /*large screens*/
 @media only screen and (min-width: 500px) {
     .app {

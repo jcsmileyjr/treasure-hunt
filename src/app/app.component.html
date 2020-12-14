@@ -24,12 +24,13 @@
         <img src="../assets/plus.png" alt="picture of an plus sign" class="img-operater" />
         <img src={{imageList[correctAnswers][1]}} alt="picture of an basketball" />
       </section>
+      <p class="hint">Hint: {{imageList[correctAnswers][2]}}</p>
 
-        <label for="answer-input" >Type your answer below:</label>
-        <input type="text" id="answerInput" [value]="userAnswer" (change)="getValue($event)" autocomplete="off" autofocus />
-        <p class="tip-style">All answers are compound words like volleyball"</p>
-        
-        <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
+      <label for="answer-input" >Type your answer below:</label>
+      <input type="text" id="answerInput" [value]="userAnswer" (change)="getValue($event)" autocomplete="off" autofocus />
+      <p class="tip-style">All answers are compound words like volleyball"</p>
+      
+      <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
     </main>
     <footer class="support-buttons-section" *ngIf="!gameOver">
       <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
