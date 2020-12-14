@@ -2,7 +2,7 @@
 
 <hr>
 
-![gif of app](src/assets/treasure-hunt-2.gif)
+![gif of app](src/assets/treasure-hunt-3.gif)
 
 ### Project Demo Link: [Treasure Hunt](https://smileytreasurehunt.netlify.app/)
 
@@ -17,7 +17,7 @@
 
 ### Purpose:
 
-Treasure Hunt kids web game where users use pictues to guess compound words.
+Treasure Hunt kids web game where users use pictues to guess compound words while racing against the time.
 
 ### Motivation:
 
@@ -29,7 +29,11 @@ The goal was to learn Angular 11 before working on a project for the DigitalOcea
 
 ### How to play:
 
-- User will input their guess and click the submit button to see if its right.  
+- User will input their guess and click the submit button to see if its right. 
+- User can skip a problem
+- User can pause the timer and un-pause
+- USer can restart the game
+- User is shown a hint. 
 
 ### This app was built with the following technologies:
 
