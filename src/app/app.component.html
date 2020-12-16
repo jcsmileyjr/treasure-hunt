@@ -20,11 +20,11 @@
     <main *ngIf="!gameOver">
       <h2>What do these pictures represent?</h2>
       <section class="image-section">
-        <img src={{imageList[correctAnswers][0]}} alt="picture of an eye" />
+        <img src={{imageList[numberOfCorrectAnswers][0]}} alt="picture of an eye" />
         <img src="../assets/plus.png" alt="picture of an plus sign" class="img-operater" />
-        <img src={{imageList[correctAnswers][1]}} alt="picture of an basketball" />
+        <img src={{imageList[numberOfCorrectAnswers][1]}} alt="picture of an basketball" />
       </section>
-      <p class="hint">Hint: {{imageList[correctAnswers][2]}}</p>
+      <p class="hint">Hint: {{imageList[numberOfCorrectAnswers][2]}}</p>
 
       <label for="answer-input" >Type your answer below:</label>
       <input type="text" id="answerInput" [value]="userAnswer" (change)="getValue($event)" autocomplete="off" autofocus />

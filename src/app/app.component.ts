@@ -14,7 +14,7 @@ export class AppComponent {
   win= false;
   answers = ["eyeball","butterfly","doghouse" ,"cupcake","honeybee","starfish", "catfish", "sunflower", "rainbow", "corndog", "football"];
   userAnswer = " ";
-  correctAnswers = 0;
+  numberOfCorrectAnswers = 0;
   imageList =[
     ['https://live.staticflickr.com/2/3038523_c3c16960cd_b.jpg', "https://api.creativecommons.engineering/v1/thumbs/603da40d-9622-491f-bf63-d0bccb879123","You have 2 of them on your face"],
     ["https://api.creativecommons.engineering/v1/thumbs/73e672b8-6cf5-47b4-a77f-6065947619fa","https://pixy.org/download/4463580/","Its a small pretty flying bug"],
@@ -28,7 +28,6 @@ export class AppComponent {
     ["../assets/corn.png","../assets/dog.png","Think of hotdogs wrap in pancake"],
     ['../assets/foot-pic.png',"https://api.creativecommons.engineering/v1/thumbs/d3a26ed2-1b0b-4ad3-90bc-8eb3e1a581e1","Eveyone loves to catch this type of sports ball"]
   ];
-  canvas;
   interval;
   pauseTimer= false;
 
@@ -52,10 +51,10 @@ export class AppComponent {
 
   // When the user click the submit button, check if submitted answer is correct and reset timer
   submitAnswer(){
-    if((this.userAnswer).trim().toLowerCase() === this.answers[this.correctAnswers]){
+    if((this.userAnswer).trim().toLowerCase() === this.answers[this.numberOfCorrectAnswers]){
       this.score += 100;
       this.timer = 60;
-      this.correctAnswers += 1;
+      this.numberOfCorrectAnswers += 1;
     }else{
       Swal.fire({
         title: 'Sorry, try again',
@@ -64,15 +63,16 @@ export class AppComponent {
       });
     }
     this.userAnswer = "";
-    if(this.correctAnswers >= 10){
+    if(this.numberOfCorrectAnswers >= 10){
       this.win = true;
     }
   }
 
+  // Give the user the ability to restart the game and reset all variables
   restart() {
     this.score = 0;
     this.timer = 60;
-    this.correctAnswers = 0;
+    this.numberOfCorrectAnswers = 0;
     this.userAnswer = "";
     clearInterval(this.interval); 
     this.interval = setInterval(()=> this.countdown(), 1000); // reset the timer
@@ -80,9 +80,10 @@ export class AppComponent {
 
   }
 
+  // Give the user the ability to skip the current picture problem
   skip() {
-    if(this.correctAnswers <10){
-      this.correctAnswers += 1;
+    if(this.numberOfCorrectAnswers <10){
+      this.numberOfCorrectAnswers += 1;
       this.userAnswer = "";
     }else{
       this.win = true;
