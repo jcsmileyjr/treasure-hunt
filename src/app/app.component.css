@@ -27,15 +27,6 @@ main {
     z-index: 1;
 }
 
-img {
-    max-width: 150px;
-}
-
-.img-operater {
-    max-width: 40px;
-}
-
-
 
 .game-over-style {
     color: red;
@@ -94,12 +85,6 @@ button {
     background-color: rgb(0, 89, 255);
 }
 
-.image-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-}
 
 .support-buttons-section {
     width: 100%;
@@ -107,10 +92,7 @@ button {
     justify-content: space-evenly;
 }
 
-.hint {
-    color: blue;
-    font-size: small;
-}
+
 
 /*large screens*/
 @media only screen and (min-width: 500px) {
@@ -129,10 +111,6 @@ button {
 
       h1 {
         font-size: 50px;
-      }
-
-      img {
-        max-width: 170px;
       }
 }
 
