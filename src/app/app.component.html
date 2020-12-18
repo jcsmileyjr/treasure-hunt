@@ -1,18 +1,6 @@
 <div class="app" *ngIf="!win">
   <div class="container">
-    <header>
-      <h1>{{title}}</h1>
-      <div class="toolbar">
-        <section>
-          <h3>Score</h3>
-          <p class="score-style">{{score}}</p>
-        </section>
-        <section>
-          <h3>Timer</h3>
-          <p class="timer-style">{{timer}}</p>
-        </section>
-      </div>
-    </header>
+    <app-header [title]="title" [score]="score" [timer]="timer"></app-header>
     <section *ngIf="gameOver" class="game-over-style">
       <h2>Game Over</h2>
       <button type="button" title="restart" class="restart-button" (click)="restart()">Restart Game</button>

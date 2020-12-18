@@ -1,13 +1,8 @@
-h1, main {
+main {
     text-align: center;
 }
 
-h1 {
-    font-size: 10vw;
-    color: #FFA102;
-}
-
-h1, h2 {
+h2 {
     margin-top: 0px;
 }
 
@@ -40,15 +35,7 @@ img {
     max-width: 40px;
 }
 
-.timer-style {
-    color: red;
-    font-weight: bold;
-}
 
-.score-style {
-    color: #FFA102;
-    font-weight: bold;
-}
 
 .game-over-style {
     color: red;
