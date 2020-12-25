@@ -1,0 +1,10 @@
+<footer class="support-buttons-section" *ngIf="!gameOver">
+    <button type="button" title="skip" (click)= "skip.emit()" class="skip-button">Skip</button>
+    <section *ngIf="!pauseTimer">
+      <button type="button" title="pause" class="pause-button" (click)="pause.emit()">Pause Timer</button>
+    </section>
+    <section *ngIf="pauseTimer">
+      <button type="button" title="pause" class="pause-button" (click)="startTimer.emit()">Restart Timer</button>
+    </section>          
+    <button type="button" title="restart" class="restart-button" (click)="restart.emit()">Restart Game</button>
+  </footer>
