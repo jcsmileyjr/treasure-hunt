@@ -13,16 +13,7 @@
       
       <button type="button" title="submit" (click)="submitAnswer()">Submit</button>
     </main>
-    <footer class="support-buttons-section" *ngIf="!gameOver">
-      <button type="button" title="skip" (click)= "skip()" class="skip-button">Skip</button>
-      <section *ngIf="!pauseTimer">
-        <button type="button" title="pause" class="pause-button" (click)="pause()">Pause Timer</button>
-      </section>
-      <section *ngIf="pauseTimer">
-        <button type="button" title="pause" class="pause-button" (click)="startTimer()">Restart Timer</button>
-      </section>          
-      <button type="button" title="restart" class="restart-button" (click)="restart()">Restart Game</button>
-    </footer>
+    <app-footer [gameOver]="gameOver" [pauseTimer]="pauseTimer" (startTimer)="startTimer()" (pause)="pause()" (skip)="skip()" (restart)="restart()"></app-footer>
   </div>
 </div>
 <div *ngIf="win" class="win-style">

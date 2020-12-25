@@ -73,27 +73,6 @@ button {
     color: #707070;
 }
 
-.pause-button {
-    background-color: red;
-}
-
-.skip-button {
-    background-color: rgb(209, 139, 9);
-}
-
-.restart-button {
-    background-color: rgb(0, 89, 255);
-}
-
-
-.support-buttons-section {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-
-
 /*large screens*/
 @media only screen and (min-width: 500px) {
     .app {
